@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ebe7e0">
+  <meta name="description" content="Ishan Ghimire, BSc CSIT student and developer from Nepal. Explore web development, semester projects, and AI video work.">
+  <title>Ishan Ghimire — Portfolio</title>
+  <link rel="icon" href="mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="vendor/gsap.min.js" defer></script>
+  <script src="vendor/ScrollTrigger.min.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="intro" id="intro" aria-hidden="true" hidden>
+    <span class="micro">Ishan Ghimire · Portfolio</span>
+    <p>Opening the doors<span>.</span></p>
+    <div class="intro-meter"></div>
+    <span class="micro">Bhaktapur, Nepal <span id="load-count">000</span></span>
+  </div>
+
+  <header class="topbar">
+    <button class="menu-trigger" type="button" data-open="navigation" aria-haspopup="dialog"><span aria-hidden="true">☰</span> Menu</button>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#home">Home</a><a href="#web-development">Web Development</a><a href="#semester-projects">Semester Projects</a><a href="#ai-video">AI Video &amp; Editing</a><a href="#about">My story</a><button type="button" data-open="contact">Contact</button>
+    </nav>
+    <div class="clock"><span>Nepal time</span> <time data-clock>--:--</time></div>
+  </header>
+  <button class="pull" type="button" role="switch" aria-checked="false" aria-label="Dark mode, pull the cord">
+    <svg viewBox="0 0 112 256" width="112" height="256" aria-hidden="true">
+      <defs>
+        <linearGradient id="cord-thread"><stop stop-color="#817051"/><stop offset=".48" stop-color="#e6d5ae"/><stop offset="1" stop-color="#93805e"/></linearGradient>
+        <linearGradient id="cord-wood"><stop stop-color="#462b1d"/><stop offset=".46" stop-color="#a97a4c"/><stop offset=".72" stop-color="#784e2e"/><stop offset="1" stop-color="#3e251a"/></linearGradient>
+        <linearGradient id="cord-brass"><stop stop-color="#826433"/><stop offset=".5" stop-color="#e4c785"/><stop offset="1" stop-color="#81612e"/></linearGradient>
+      </defs>
+      <path class="cord-line" d="M56 -8 Q56 78 56 132 T56 213" stroke="url(#cord-thread)" stroke-width="5"/>
+      <path class="cord-line cord-braid" d="M56 -8 Q56 78 56 132 T56 213" stroke="#745f40" stroke-width="3" stroke-dasharray="1 2.4"/>
+      <g class="cord-handle" transform="translate(56 213)">
+        <rect x="-4" y="-2" width="8" height="9" rx="2" fill="url(#cord-brass)"/>
+        <path d="M-4 5 C-5 9 -12 18 -11 28 C-10 41 10 41 11 28 C12 18 5 9 4 5Z" fill="url(#cord-wood)"/>
+        <path d="M-2 7 C-5 16 -8 23 -6 30 M2 7 C5 15 8 25 6 32" fill="none" stroke="#e4a76d" stroke-opacity=".3"/>
+      </g>
+    </svg>
+  </button>
+  <div class="door-passage" aria-hidden="true" hidden></div>
+  <span class="door-cursor" aria-hidden="true">Click to enter</span>
+
+  <main id="main">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-stage">
+        <div class="hero-content">
+          <p class="eyebrow"><span class="dot"></span> BSc CSIT Undergraduate</p>
+          <h1 id="hero-title">Hi, I’m Ishan.<span>I’m a developer &amp; creator.</span></h1>
+          <div class="hero-lead" aria-hidden="true">I am a</div>
+          <div class="book" aria-hidden="true">
+            <div class="book-cover"></div>
+            <div class="book-pages"></div>
+            <div class="book-paper" id="book-paper">
+              <span class="book-role">Web Developer</span>
+              <span class="book-number micro">01 / 03</span>
+            </div>
+            <div class="book-rings"></div>
+          </div>
+          <div class="actions">
+            <button class="pill primary" type="button" data-open="contact">Contact me <span class="pill-arrow" aria-hidden="true">↗</span></button>
+            <a class="pill secondary" href="#works">See my work</a>
+          </div>
+        </div>
+        <div class="portrait">
+          <div class="portrait-photo">
+            <img class="portrait-mono" src="ishan-cutout.webp" width="1074" height="1000" alt="Portrait of Ishan Ghimire" fetchpriority="high">
+            <canvas class="portrait-brush" aria-hidden="true"></canvas>
+            <img class="portrait-color" src="ishan-cutout.webp" width="1074" height="1000" alt="" aria-hidden="true">
+          </div>
+          <button type="button" class="ability-trigger" data-open="abilities" aria-haspopup="dialog">My ability card</button>
+        </div>
+      </div>
+      <div class="hero-strip micro">
+        <span>Bhaktapur, Nepal</span><span>Web · CSIT · Video</span><a href="#works">Scroll to explore <span aria-hidden="true">↓</span></a>
+      </div>
+    </section>
+
+    <section class="works" id="works" aria-labelledby="works-title">
+      <div class="hall-head">
+        <div class="hall-title">
+          <p class="micro"><span class="dot"></span> Selected work / 01–03</p>
+          <h2 id="works-title">What’s behind <br>the doors?</h2>
+        </div>
+        <div class="hall-guide">
+          <p id="hall-caption">Choose a door to explore the work inside.</p>
+          <span class="micro">Click to enter <span aria-hidden="true">↘</span></span>
+        </div>
+      </div>
+      <div class="door-wall">
+        <div class="doors">
+          <button class="door door-web" type="button" data-work="web-development" aria-label="Open Web Development" aria-haspopup="dialog">
+            <span class="door-frame" aria-hidden="true"></span>
+            <span class="door-light" aria-hidden="true"></span>
+            <span class="door-leaf" aria-hidden="true"><span class="door-grooves"></span><span class="plaque">Web<br>Development</span><span class="door-knob"></span><span class="keyhole"></span></span>
+            <span class="door-step" aria-hidden="true"></span>
+          </button>
+          <button class="door door-campus" type="button" data-work="semester-projects" aria-label="Open Semester Projects" aria-haspopup="dialog">
+            <span class="door-frame" aria-hidden="true"></span>
+            <span class="door-light" aria-hidden="true"></span>
+            <span class="door-leaf" aria-hidden="true"><span class="door-grooves"></span><span class="plaque">Semester<br>Projects</span><span class="door-knob"></span><span class="keyhole"></span></span>
+            <span class="door-step" aria-hidden="true"></span>
+          </button>
+          <button class="door door-film" type="button" data-work="ai-video" aria-label="Open AI Video &amp; Editing" aria-haspopup="dialog">
+            <span class="door-frame" aria-hidden="true"></span>
+            <span class="door-light" aria-hidden="true"></span>
+            <span class="door-leaf" aria-hidden="true"><span class="door-grooves"></span><span class="plaque">AI Video<br>&amp; Editing</span><span class="door-knob"></span><span class="keyhole"></span></span>
+            <span class="door-step" aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="door-preview" aria-hidden="true">
+          <h3></h3><p class="micro"></p><ul></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="story" id="about" aria-labelledby="story-title">
+      <div class="story-header">
+        <div class="story-counter">
+          <p class="micro"><span class="dot"></span> My story</p>
+          <h2 id="story-title">Let’s go back in time.</h2>
+          <div class="story-year" id="story-year" aria-hidden="true">2026</div>
+          <p class="story-date micro" id="story-date" aria-hidden="true">Oct 2026 — Present</p>
+          <div class="story-progress micro" aria-hidden="true"><span>◷</span> <span id="story-index">01 / 06</span> <span class="story-track"><span></span></span></div>
+        </div>
+      </div>
+      <ol class="timeline">
+        <li class="milestone current" data-year="2026" data-date="Oct 2026 — Present">
+          <p class="micro">Oct 2026 — Present</p><h3>Junior IT Officer Intern</h3><p class="institution">Omni Trident A.I.</p>
+          <p>I contribute to web projects, including the QJMOTOR Nepal and HAMS Group websites.</p>
+        </li>
+        <li class="milestone" data-year="2026" data-date="2025 — Sep 2026">
+          <p class="micro">2025 — Sep 2026</p><h3>Mathematics Tutor</h3><p class="institution">Paragon Academy</p>
+          <p>I taught Grade 8 mathematics, prepared lessons, and helped students practice problem-solving and prepare for exams.</p>
+        </li>
+        <li class="milestone" data-year="2024" data-date="2024 — Present">
+          <p class="micro">2024 — Present</p><h3>BSc CSIT</h3><p class="institution">St. Xavier’s College, Maitighar · Tribhuvan University</p>
+          <p>Academic scholarship recipient, SXC Collabrains member, and class representative for Semesters I–III. Participated in Sandbox 2.0, volunteered at Sandbox 3.0, and led esports tournament organization for DoCS Family Week.</p>
+          <div class="tags"><span>Sem I · 3.78 GPA</span><span>Sem II · 3.88 GPA</span><span>Sem III · 3.82 GPA</span></div>
+        </li>
+        <li class="milestone" data-year="2024" data-date="2024">
+          <p class="micro">2024</p><h3>Learning Content &amp; Voice Artist</h3><p class="institution">Smaterr</p>
+          <p>I created educational presentations and recorded voice-overs for instructional material.</p>
+        </li>
+        <li class="milestone" data-year="2022" data-date="2022 — 2024">
+          <p class="micro">2022 — 2024</p><h3>+2 Science</h3><p class="institution">Khwopa Secondary School</p>
+          <p>Academic scholarship recipient. Graduated with a 3.84 GPA.</p>
+        </li>
+        <li class="milestone" data-year="2022" data-date="2022">
+          <p class="micro">2022</p><h3>Secondary Education Examination</h3><p class="institution">Everest English School</p>
+          <p>Completed SEE with a 3.90 GPA.</p>
+        </li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="footer" id="connect">
+    <div class="footer-main">
+      <p class="micro"><span class="dot"></span> Get in touch</p>
+      <h2>Have something<br>in mind?</h2>
+      <p>Let’s talk about your website, a college collaboration, or an idea for an AI video.</p>
+      <div class="actions"><button class="pill primary" type="button" data-open="contact">Contact me <span class="pill-arrow" aria-hidden="true">↗</span></button><a class="pill secondary" href="#works">See my work</a></div>
+    </div>
+    <div class="footer-links">
+      <div><h3 class="micro">Work</h3><a href="#web-development">Web Development</a><a href="#semester-projects">Semester Projects</a><a href="#ai-video">AI Video &amp; Editing</a></div>
+      <div><h3 class="micro">Navigate</h3><a href="#home">Home</a><a href="#about">My story</a><button class="text-button" type="button" data-open="contact">Contact</button></div>
+      <div><h3 class="micro">Find me</h3><a href="https://www.linkedin.com/in/ishanghimire/">LinkedIn ↗</a><a href="https://github.com/ishan2021">GitHub ↗</a><span>Bhaktapur, Nepal</span></div>
+    </div>
+    <div class="footer-bottom micro"><span>© <span id="copyright-year">2026</span> Ishan Ghimire</span><a href="#home">Back to top ↑</a></div>
+  </footer>
+  <a class="to-top" href="#home" aria-label="Back to top" hidden>↑</a>
+
+  <dialog class="menu-dialog" id="navigation" aria-labelledby="menu-title">
+    <div class="dialog-top"><h2 class="micro" id="menu-title">Ishan Ghimire · Portfolio</h2><button class="close" type="button" data-close aria-label="Close menu">×</button></div>
+    <nav aria-label="Main navigation">
+      <a href="#home" data-dismiss><span>00</span> Home <i>↗</i></a>
+      <a href="#web-development" data-dismiss><span>01</span> Web Development <i>↗</i></a>
+      <a href="#semester-projects" data-dismiss><span>02</span> Semester Projects <i>↗</i></a>
+      <a href="#ai-video" data-dismiss><span>03</span> AI Video &amp; Editing <i>↗</i></a>
+      <a href="#about" data-dismiss><span>04</span> My story <i>↗</i></a>
+      <button type="button" data-open="contact"><span>05</span> Contact <i>↗</i></button>
+    </nav>
+  </dialog>
+
+  <dialog class="work-dialog" id="work-detail" aria-labelledby="work-title">
+    <div class="dialog-top work-nav"><button class="pill secondary" type="button" data-close>← Back to the doors</button><button class="pill secondary" type="button" data-open="navigation">☰ Menu</button></div>
+    <div class="work-scroll" tabindex="0" role="region" aria-label="Projects">
+      <div class="work-inner">
+        <div class="work-intro"><h2 id="work-title"></h2><p id="work-description"></p></div>
+        <div class="project-list" id="project-list"></div>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="ability-dialog" id="abilities" aria-labelledby="ability-title">
+    <div class="dialog-top"><h2 class="micro" id="ability-title">My ability card</h2><button class="close" type="button" data-close aria-label="Close ability card">×</button></div>
+    <button class="skill-card" type="button" aria-label="Flip ability card to see skills" aria-pressed="false">
+      <span class="skill-inner">
+        <span class="skill-face card-front">
+          <span class="micro">IG / BHKT / NP</span>
+          <span class="card-image"></span>
+          <span class="card-name">Ishan<br>Ghimire</span>
+          <span class="micro">BSc CSIT · Developer &amp; creator</span>
+        </span>
+        <span class="skill-face card-back">
+          <span class="micro">Ishan Ghimire / Toolkit</span>
+          <span><b>Frontend</b>HTML, CSS, JavaScript, React, Tailwind</span>
+          <span><b>Backend</b>Node.js, Express, MongoDB, MySQL</span>
+          <span><b>Programming &amp; ML</b>C, C++, Python, scikit-learn, NumPy, Pandas</span>
+          <span class="micro">Git · GitHub · Jupyter</span>
+        </span>
+      </span>
+    </button>
+    <p class="micro card-hint">Move to tilt · Click to flip</p>
+  </dialog>
+
+  <dialog class="contact-dialog" id="contact" aria-labelledby="contact-title">
+    <div class="dialog-top"><p class="micro">Start a conversation</p><button class="close" type="button" data-close aria-label="Close contact">×</button></div>
+    <h2 id="contact-title">Tell me what<br>you’re working on.</h2>
+    <form id="contact-form">
+      <label>Your name<input name="name" autocomplete="name" required placeholder="Name"></label>
+      <label>Your email<input name="email" autocomplete="email" type="email" required placeholder="you@example.com"></label>
+      <label>What’s it about?<select name="topic" required><option value="">Choose a topic</option><option>Web Development</option><option>Semester Projects</option><option>AI Video &amp; Editing</option><option>Something else</option></select></label>
+      <label>Your message<textarea name="message" rows="3" required placeholder="A little about the idea…"></textarea></label>
+      <button type="submit" class="pill primary">Open email draft <span class="pill-arrow" aria-hidden="true">↗</span></button>
+    </form>
+    <p class="email-note">Email me directly at <a href="mailto:ghimireishan55@gmail.com">ghimireishan55@gmail.com</a>.</p>
+  </dialog>
+</body>
+</html>
