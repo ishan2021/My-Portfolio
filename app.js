@@ -1003,10 +1003,10 @@ if (motion && scrollEffects) {
     motion.fromTo(
       "#works-title",
       {
-        clipPath: "inset(-.18em calc(100% - 0em) -.18em -.18em)",
+        "--works-title-hidden": 1,
       },
       {
-        clipPath: "inset(-.18em calc(0% - .18em) -.18em -.18em)",
+        "--works-title-hidden": 0,
         ease: "none",
         scrollTrigger: {
           trigger: "#works-title",

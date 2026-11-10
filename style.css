@@ -116,6 +116,7 @@ h1, h2, h3, p { margin: 0; }
 .hall-title { padding-left: 19px; border-left: 1px solid var(--line); }
 .hall-title .micro { color: var(--muted); margin-bottom: 10px; }
 .hall-title h2, .footer h2 { font-size: clamp(46px, 9vw, 130px); line-height: .88; letter-spacing: -.082em; font-weight: 720; }
+#works-title { clip-path: inset(-.18em calc((100% + .36em) * var(--works-title-hidden, 0) - .18em) -.18em -.18em); }
 .hall-guide { width: min(220px, 35%); font-size: 14px; line-height: 1.45; color: var(--muted); }
 .hall-guide .micro { display: block; margin-top: 13px; color: var(--ink); }
 .door-wall { position: relative; padding: 8px var(--pad) 0; }
