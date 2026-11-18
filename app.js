@@ -39,14 +39,12 @@ const work = {
       },
       {
         title: "HAMS Hospital Tender Portal",
-        type: "Web application · Live",
+        type: "Web application",
         art: "HAMS Tender",
         color: "navy",
         screenshot: "hams-tender.webp",
-        url: "https://hams-hospital-tender.vercel.app/login",
-        linkLabel: "Open sign-in page",
         description:
-          "A web portal for HAMS Hospital’s tender process. The live link opens the sign-in page.",
+          "A web portal for HAMS Hospital’s tender process.",
       },
       {
         title: "Paragon Academy Website",
