@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="style.css?v=works-reveal-2">
   <script src="vendor/gsap.min.js" defer></script>
   <script src="vendor/ScrollTrigger.min.js" defer></script>
-  <script src="app.js?v=tender-preview-1" defer></script>
+  <script src="app.js?v=email-contact-1" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -24,7 +24,7 @@
   <header class="topbar">
     <button class="menu-trigger" type="button" data-open="navigation" aria-haspopup="dialog"><span aria-hidden="true">☰</span> Menu</button>
     <nav class="desktop-nav" aria-label="Main navigation">
-      <a href="#home">Home</a><a href="#web-development">Web Development</a><a href="#semester-projects">Semester Projects</a><a href="#ai-video">AI Video &amp; Editing</a><a href="#about">My story</a><button type="button" data-open="contact">Contact</button>
+      <a href="#home">Home</a><a href="#web-development">Web Development</a><a href="#semester-projects">Semester Projects</a><a href="#ai-video">AI Video &amp; Editing</a><a href="#about">My story</a><a href="mailto:ghimireishan55@gmail.com">Contact</a>
     </nav>
     <div class="clock"><span>Nepal time</span> <time data-clock>--:--</time></div>
   </header>
@@ -64,7 +64,7 @@
             <div class="book-rings"></div>
           </div>
           <div class="actions">
-            <button class="pill primary" type="button" data-open="contact">Contact me <span class="pill-arrow" aria-hidden="true">↗</span></button>
+            <a class="pill primary" href="mailto:ghimireishan55@gmail.com">Contact me <span class="pill-arrow" aria-hidden="true">↗</span></a>
             <a class="pill secondary" href="#works">See my work</a>
           </div>
         </div>
@@ -165,11 +165,12 @@
       <p class="micro"><span class="dot"></span> Get in touch</p>
       <h2>Have something<br>in mind?</h2>
       <p>Let’s talk about your website, a college collaboration, or an idea for an AI video.</p>
-      <div class="actions"><button class="pill primary" type="button" data-open="contact">Contact me <span class="pill-arrow" aria-hidden="true">↗</span></button><a class="pill secondary" href="#works">See my work</a></div>
+      <p class="email-note"><a href="mailto:ghimireishan55@gmail.com">ghimireishan55@gmail.com</a></p>
+      <div class="actions"><a class="pill primary" href="mailto:ghimireishan55@gmail.com">Contact me <span class="pill-arrow" aria-hidden="true">↗</span></a><a class="pill secondary" href="#works">See my work</a></div>
     </div>
     <div class="footer-links">
       <div><h3 class="micro">Work</h3><a href="#web-development">Web Development</a><a href="#semester-projects">Semester Projects</a><a href="#ai-video">AI Video &amp; Editing</a></div>
-      <div><h3 class="micro">Navigate</h3><a href="#home">Home</a><a href="#about">My story</a><button class="text-button" type="button" data-open="contact">Contact</button></div>
+      <div><h3 class="micro">Navigate</h3><a href="#home">Home</a><a href="#about">My story</a><a class="text-button" href="mailto:ghimireishan55@gmail.com">Contact</a></div>
       <div><h3 class="micro">Find me</h3><a href="https://www.linkedin.com/in/ishanghimire/">LinkedIn ↗</a><a href="https://github.com/ishan2021">GitHub ↗</a><span>Bhaktapur, Nepal</span></div>
     </div>
     <div class="footer-bottom micro"><span>© <span id="copyright-year">2026</span> Ishan Ghimire</span><a href="#home">Back to top ↑</a></div>
@@ -184,7 +185,7 @@
       <a href="#semester-projects" data-dismiss><span>02</span> Semester Projects <i>↗</i></a>
       <a href="#ai-video" data-dismiss><span>03</span> AI Video &amp; Editing <i>↗</i></a>
       <a href="#about" data-dismiss><span>04</span> My story <i>↗</i></a>
-      <button type="button" data-open="contact"><span>05</span> Contact <i>↗</i></button>
+      <a href="mailto:ghimireishan55@gmail.com"><span>05</span> Contact <i>↗</i></a>
     </nav>
   </dialog>
 
@@ -218,19 +219,6 @@
       </span>
     </button>
     <p class="micro card-hint">Move to tilt · Click to flip</p>
-  </dialog>
-
-  <dialog class="contact-dialog" id="contact" aria-labelledby="contact-title">
-    <div class="dialog-top"><p class="micro">Start a conversation</p><button class="close" type="button" data-close aria-label="Close contact">×</button></div>
-    <h2 id="contact-title">Tell me what<br>you’re working on.</h2>
-    <form id="contact-form">
-      <label>Your name<input name="name" autocomplete="name" required placeholder="Name"></label>
-      <label>Your email<input name="email" autocomplete="email" type="email" required placeholder="you@example.com"></label>
-      <label>What’s it about?<select name="topic" required><option value="">Choose a topic</option><option>Web Development</option><option>Semester Projects</option><option>AI Video &amp; Editing</option><option>Something else</option></select></label>
-      <label>Your message<textarea name="message" rows="3" required placeholder="A little about the idea…"></textarea></label>
-      <button type="submit" class="pill primary">Open email draft <span class="pill-arrow" aria-hidden="true">↗</span></button>
-    </form>
-    <p class="email-note">Email me directly at <a href="mailto:ghimireishan55@gmail.com">ghimireishan55@gmail.com</a>.</p>
   </dialog>
 </body>
 </html>

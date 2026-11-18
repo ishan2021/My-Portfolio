@@ -3,7 +3,6 @@ const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
 const motion = window.gsap;
 const scrollEffects = window.ScrollTrigger;
 if (motion && scrollEffects) motion.registerPlugin(scrollEffects);
-const emailAddress = "ghimireishan55@gmail.com";
 
 const work = {
   "web-development": {
@@ -1059,15 +1058,3 @@ window.addEventListener(
   },
   { once: true },
 );
-
-document.querySelector("#contact-form").addEventListener("submit", (event) => {
-  event.preventDefault();
-  const data = new FormData(event.currentTarget);
-  const subject = encodeURIComponent(
-    `Portfolio inquiry — ${data.get("topic")}`,
-  );
-  const body = encodeURIComponent(
-    `${data.get("message")}\n\nFrom ${data.get("name")}\n${data.get("email")}`,
-  );
-  location.href = `mailto:${emailAddress}?subject=${subject}&body=${body}`;
-});
